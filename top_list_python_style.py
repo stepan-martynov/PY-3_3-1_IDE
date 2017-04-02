@@ -23,8 +23,6 @@ def full_string(file_name):
 
         else:
             for item in full_file['rss']['channel']['item']:
-                # print(item['title'])
-                # print(item['description'])
                 string_from_file += str(item['title']).lower()
                 string_from_file += str(item['description']).lower()
         return string_from_file
