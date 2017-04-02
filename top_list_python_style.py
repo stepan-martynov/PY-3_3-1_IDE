@@ -11,6 +11,7 @@ def full_string(file_name):
         'newsfr.json': ['iso8859_5', True]
     }
 
+
     with open('py1_lesson_2.3/' + file_name, encoding=encode_dict[file_name][0]) as f:
         # Открывем файл с выбранной кодировкой и переводим в json
         full_file = json.load(f)
