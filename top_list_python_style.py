@@ -4,7 +4,6 @@ from collections import Counter
 
 
 def full_string(file_name):
-    """Create string from file title и description"""
     encode_dict = {
         'newsafr.json': ['utf_8', True],
         'newscy.json': ['koi8_r', True],
