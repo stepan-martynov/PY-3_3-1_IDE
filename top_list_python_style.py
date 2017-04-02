@@ -11,7 +11,6 @@ def full_string(file_name):
         'newsfr.json': ['iso8859_5', True]
     }
 
-
     with open('py1_lesson_2.3/' + file_name, encoding=encode_dict[file_name][0]) as f:
         # Открывем файл с выбранной кодировкой и переводим в json
         full_file = json.load(f)
@@ -30,8 +29,8 @@ def full_string(file_name):
         return string_from_file
 
 
-def determine_the_rating_of_words(full_string):
-    words = re.findall(r'\w{6,}', full_string)
+def determine_the_rating_of_words(string_from_file):
+    words = re.findall(r'\w{6,}', string_from_file)
     return Counter(words).most_common(10)
 
 
