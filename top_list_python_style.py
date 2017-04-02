@@ -2,7 +2,6 @@ import json
 import re
 from collections import Counter
 
-
 def full_string(file_name):
     encode_dict = {
         'newsafr.json': ['utf_8', True],
@@ -33,11 +32,9 @@ def full_string(file_name):
         # Возвращем 1 болшую строку
         return string_from_file
 
-
 def determine_the_rating_of_words(full_string):
     words = re.findall(r'\w{6,}', full_string)
     return Counter(words).most_common(10)
-
 
 def main():
     while True:
@@ -50,7 +47,6 @@ def main():
             for word in top_rated_words:
                 print('"{}" – встречается в тексте {} раз(а)'.format(word[0], word[1]))
             print('===================================================')
-
 
 if __name__ == '__main__':
     main()
