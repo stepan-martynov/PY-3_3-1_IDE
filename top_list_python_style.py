@@ -27,9 +27,6 @@ def full_string(file_name):
                 # print(item['description'])
                 string_from_file += str(item['title']).lower()
                 string_from_file += str(item['description']).lower()
-
-        # full_string = full_string.strip().replace(',', '').replace('.', '').replace('/', '').split(' ')
-        # Возвращем 1 болшую строку
         return string_from_file
 
 def determine_the_rating_of_words(full_string):
